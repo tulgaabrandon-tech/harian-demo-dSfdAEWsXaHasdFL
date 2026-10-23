@@ -1,0 +1,53 @@
+/* Hairan design tokens. Single source for colour, type, spacing, radius and layout.
+   Values come from the Hairan brandbook (colour, typography and graphic-element pages). */
+:root{
+  color-scheme: light;
+
+  /* Brand colours */
+  --coconut:#F2F7EF;     /* light ground */
+  --blackberry:#17132B;  /* dark ground, body text */
+  --spinach:#0B420D;     /* wordmark, headlines on light */
+  --kale:#00731A;        /* buttons and links on light */
+  --basil:#009618;       /* core brand green, large shapes */
+  --lime:#74D341;        /* highlights and buttons on dark */
+  --honey:#FFB938;       /* discounts, last-call tags */
+  --white:#FFFFFF;
+
+  /* Derived neutrals (tinted toward the greens) */
+  --coconut-2:#E6EFE1;   /* quiet panels, image wells */
+  --line:#D5E2CF;        /* hairlines and keylines on Coconut */
+  --muted:#4E5A4F;       /* secondary text on Coconut (6.7:1) */
+  --muted-dark:#B9B5D3;  /* secondary text on Blackberry (9.1:1) */
+  --blackberry-2:#221D3B;/* raised surface on Blackberry */
+
+  /* Gradient: Green Apple, the symbol's radial */
+  --green-apple: radial-gradient(circle at 50% 30%, var(--lime) 0%, var(--basil) 100%);
+
+  /* Type */
+  --font-display:"Nunito","Manrope","Helvetica Neue",Arial,sans-serif;
+  --font-body:"Manrope","Helvetica Neue",Arial,sans-serif;
+  --fs-display:clamp(2.6rem, 1.6rem + 4.2vw, 4.5rem);  /* 42 → 72 */
+  --fs-h2:clamp(1.9rem, 1.4rem + 2vw, 2.75rem);        /* 30 → 44 */
+  --fs-h3:clamp(1.25rem, 1.1rem + .6vw, 1.5rem);       /* 20 → 24 */
+  --fs-lead:clamp(1.05rem, 1rem + .3vw, 1.2rem);       /* 17 → 19 */
+  --fs-body:1rem;                                       /* 16 */
+  --fs-small:.875rem;                                   /* 14 */
+  --fs-label:.75rem;                                    /* 12, caps */
+
+  /* Spacing scale (4-based) */
+  --s-1:4px; --s-2:8px; --s-3:12px; --s-4:16px; --s-5:24px;
+  --s-6:32px; --s-7:48px; --s-8:72px; --s-9:112px;
+
+  /* Radii */
+  --r-sm:8px;   /* badges, inputs */
+  --r-md:12px;  /* buttons */
+  --r-lg:20px;  /* image wells, panels */
+  --r-xl:28px;  /* full-bleed feature panels */
+
+  /* Layout */
+  --content:1200px;
+  --gutter:max(20px, env(safe-area-inset-left, 0px));
+  --gutter-r:max(20px, env(safe-area-inset-right, 0px));
+  --header-h:72px;
+  --tabbar-h:64px;
+}

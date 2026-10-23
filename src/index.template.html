@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="mn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Хайран · Азын уут</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Зах зээлийн бодит үнээс 2–3 дахин хямд Азын уут. Улаанбаатар.">
+<link rel="icon" href="assets/logo/logo-icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/site.css">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+{{SPRITE}}
+<a class="skip" href="#main" data-i18n="skip">Үндсэн агуулга руу</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="hairan"><img src="assets/logo/logotype.svg" alt="hairan" width="158" height="41"></a>
+    <nav class="nav" aria-label="Үндсэн цэс">
+      <a href="#" data-i18n="nav.map">Газрын зураг</a>
+      <a href="#" data-i18n="nav.guide">Хэрэглэх заавар</a>
+      <a href="#" data-i18n="nav.partner">Бизнес хамтрагч болох</a>
+    </nav>
+    <div class="header-tools">
+      <div class="lang" role="group" aria-label="Хэл / Language">
+        <button type="button" id="lang-mn" aria-pressed="true">МН</button>
+        <button type="button" id="lang-en" aria-pressed="false">EN</button>
+      </div>
+      <button class="btn btn-secondary btn-sm" type="button" data-app-open><svg class="icon" aria-hidden="true"><use href="#i-smartphone"/></svg><span data-i18n="cta.appView">Апп үзэх</span></button>
+      <a class="btn btn-primary btn-sm" href="#" data-i18n="cta.login">Нэвтрэх</a>
+      <button class="menu-btn" type="button" id="menu-btn" aria-expanded="false" aria-controls="mobile-nav" aria-label="Цэс">
+        <svg class="icon" aria-hidden="true"><use href="#i-menu-burger"/></svg>
+      </button>
+    </div>
+  </div>
+  <nav class="mobile-nav" id="mobile-nav" data-open="false" aria-label="Цэс">
+    <a href="#"><svg class="icon" aria-hidden="true"><use href="#i-map"/></svg><span data-i18n="nav.map">Газрын зураг</span></a>
+    <a href="#"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="nav.guide">Хэрэглэх заавар</span></a>
+    <a href="#"><svg class="icon" aria-hidden="true"><use href="#i-store-alt"/></svg><span data-i18n="nav.partner">Бизнес хамтрагч болох</span></a>
+    <button type="button" class="mn-btn" data-app-open><svg class="icon" aria-hidden="true"><use href="#i-smartphone"/></svg><span data-i18n="cta.appView">Апп үзэх</span></button>
+  </nav>
+</header>
+
+<main id="main">
+  <span id="top"></span>
+  <!-- Hero: oversized line logo on Blackberry -->
+  <section class="hero on-dark" aria-labelledby="hero-title">
+    <img class="hero-art" src="assets/elements/line-logo-dark.webp" alt="" width="1195" height="1030">
+    <div class="wrap">
+      <div class="hero-copy">
+        <h1 id="hero-title" data-i18n-html="hero.title"><em>Азын уутанд</em> юу байх бол?</h1>
+        <p class="lead" data-i18n-html="hero.lead"><strong>Зах зээлийн бодит үнээс 2–3 дахин хямд.</strong> Улаанбаатар хотын бэйкери, кафе, нарийн боовны газрууд.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#bags"><svg class="icon" aria-hidden="true"><use href="#i-shopping-bag"/></svg><span data-i18n="hero.cta">Азын уут үзэх</span></a>
+          <a class="btn btn-secondary" href="#"><svg class="icon" aria-hidden="true"><use href="#i-map"/></svg><span data-i18n="nav.map">Газрын зураг</span></a>
+        </div>
+        <p class="hero-place"><svg class="icon" aria-hidden="true"><use href="#i-marker"/></svg><span data-i18n="hero.place">Улаанбаатар</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ending soon -->
+  <section class="section" id="bags" aria-labelledby="bags-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2 id="bags-title" data-i18n="bags.title">Удахгүй дуусна</h2>
+          <p data-i18n="bags.sub">Авах цаг нь ойртож буй уутнууд.</p>
+        </div>
+        <a class="link-arrow" href="#"><span data-i18n="bags.all">Бүгдийг газрын зураг дээр</span><svg class="icon" aria-hidden="true"><use href="#i-arrow-small-right"/></svg></a>
+      </div>
+      <div class="chips" role="group" aria-label="Ангилал">
+        <button class="chip" type="button" data-filter="all" aria-pressed="true"><span data-i18n="chip.all">Бүгд</span></button>
+        <button class="chip" type="button" data-filter="bread" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#i-bread"/></svg><span data-i18n="chip.bread">Талх</span></button>
+        <button class="chip" type="button" data-filter="pastry" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#i-croissant"/></svg><span data-i18n="chip.pastry">Нарийн боов</span></button>
+        <button class="chip" type="button" data-filter="cake" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#i-cake-birthday"/></svg><span data-i18n="chip.cake">Бялуу</span></button>
+      </div>
+      <div class="bags" id="bag-grid" aria-live="polite"></div>
+      <div class="more"><button class="btn btn-secondary" type="button" id="show-more" data-i18n="bags.more">Бусад уутыг харах</button></div>
+    </div>
+  </section>
+
+  <!-- Tomorrow: a short list, not cards -->
+  <section class="section tomorrow" aria-labelledby="tmr-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2 id="tmr-title" data-i18n="tmr.title">Маргааш шинээр</h2>
+          <p data-i18n="tmr.sub">Маргааш авах боломжтой шинэ уутнууд.</p>
+        </div>
+      </div>
+      <ul class="rows" id="tmr-list"></ul>
+    </div>
+  </section>
+
+  <!-- How it works: Basil + oversized solid logo -->
+  <section class="how" aria-labelledby="how-title">
+    <img class="how-art" src="assets/elements/solid-logo-basil.webp" alt="" width="1115" height="1025">
+    <div class="wrap">
+      <div class="intro">
+        <p class="label" data-i18n="how.label">Азын уут</p>
+        <h2 id="how-title" data-i18n="how.title">Хэрхэн ажилладаг вэ?</h2>
+        <p data-i18n="how.p1">Уутны ангилал тодорхой ч доторх бүтээгдэхүүн өдөр бүр өөр байдаг. Зах зээлийн бодит үнээс 2–3 дахин хямд.</p>
+        <p class="no-delivery"><svg class="icon" aria-hidden="true"><use href="#i-store-alt"/></svg><span data-i18n="how.pickup">Хүргэлт хийгдэхгүй. Уутаа дэлгүүрээс очиж авна.</span></p>
+      </div>
+      <ol class="steps">
+        <li class="step"><div><h3 data-i18n="s1.t">Уутаа сонго</h3><p data-i18n="s1.p">Апп эсвэл сайтаас Азын уутаа сонгоно.</p></div></li>
+        <li class="step"><div><h3 data-i18n="s2.t">QPay-ээр төл</h3><p data-i18n="s2.p">Захиалгаа урьдчилан төлнө.</p></div></li>
+        <li class="step"><div><h3 data-i18n="s3.t">Авах кодоо ав</h3><p data-i18n="s3.p">Төлбөр орсны дараа авах код харагдана.</p></div></li>
+        <li class="step"><div><h3 data-i18n="s4.t">Очоод ав</h3><p data-i18n="s4.p">Дэлгүүрийн заасан авах цагт очиж, кодоо хэлээд уутаа авна.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Rules -->
+  <section class="section" aria-labelledby="rules-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="rules-title" data-i18n="rules.title">Захиалахаас өмнө</h2>
+        <a class="link-arrow" href="#"><span data-i18n="rules.link">Хэрэглэх заавар</span><svg class="icon" aria-hidden="true"><use href="#i-arrow-small-right"/></svg></a>
+      </div>
+      <div class="rules">
+        <div class="rule"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg><h3 data-i18n="r1.t">Цуцлах</h3><p data-i18n="r1.p">Авах цаг эхлэхээс 3 цагийн өмнө цуцалбал мөнгийг бүтнээр буцаана.</p></div>
+        <div class="rule"><svg class="icon" aria-hidden="true"><use href="#i-hourglass-end"/></svg><h3 data-i18n="r2.t">Очиж аваагүй бол</h3><p data-i18n="r2.p">Буцаан олголт хийгдэхгүй. Дэлгүүр захиалгыг цуцалбал мөнгийг бүтнээр буцаана.</p></div>
+        <div class="rule"><svg class="icon" aria-hidden="true"><use href="#i-star"/></svg><h3 data-i18n="r3.t">Буцаан олголт</h3><p data-i18n="r3.p">Оноогоор шууд (1 оноо = 1₮) эсвэл 24 цагийн дотор дансаар. Хэлбэрийг та сонгоно.</p></div>
+        <div class="rule"><svg class="icon" aria-hidden="true"><use href="#i-box-open"/></svg><h3 data-i18n="r4.t">Харшил</h3><p data-i18n="r4.p">Уут бүрт харшил, анхааруулга бичигдсэн. Эргэлзвэл захиалахаасаа өмнө дэлгүүртэй холбогдоно уу.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Partner places -->
+  <section class="section" style="padding-top:0" aria-labelledby="shops-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2 id="shops-title" data-i18n="shops.title">Хамтрагч газрууд</h2>
+          <p data-i18n="shops.sub">Азын уутаа эдгээр газраас авна.</p>
+        </div>
+      </div>
+      <div class="shops" id="shop-list"></div>
+    </div>
+  </section>
+
+  <!-- Become a partner: repeating pattern -->
+  <section class="partner" aria-labelledby="partner-title">
+    <div class="wrap">
+      <div class="partner-panel on-dark">
+        <div>
+          <p class="label" data-i18n="partner.label">Бизнес хамтрагч</p>
+          <h2 id="partner-title" data-i18n="partner.title">Тантай хамтрахдаа баяртай байна</h2>
+          <p data-i18n="partner.p">Бүтээгдэхүүнээ Хайран дээр Азын уут болгон зараарай.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="#" data-i18n="partner.cta">Хамтрагч болох</a>
+            <span class="btn btn-secondary" style="cursor:default">+976 9406 1666</span>
+          </div>
+        </div>
+        <ul class="perks">
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="perk1">Утасны дугаараа баталгаажуулахад бизнесийн профайл автоматаар үүснэ.</span></li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="perk2">Борлуулалтын дүнгээр хамтрагчийн цол ахина.</span></li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="perk3">Цол бүрт гэрчилгээ, дэлгүүрийн тэмдэг, бүсдээ эхэнд харагдах эрх зэрэг давуу тал нэмэгдэнэ.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer on-dark">
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <img src="assets/logo/logotype-white.svg" alt="hairan" width="158" height="41">
+        <p data-i18n="foot.about">Зах зээлийн бодит үнээс 2–3 дахин хямд Азын уут. Улаанбаатар.</p>
+      </div>
+      <div>
+        <h2 data-i18n="foot.service">Үйлчилгээ</h2>
+        <ul>
+          <li><a href="#" data-i18n="nav.map">Газрын зураг</a></li>
+          <li><a href="#" data-i18n="nav.guide">Хэрэглэх заавар</a></li>
+          <li><a href="#" data-i18n="cta.appLong">Апп татах (Android)</a></li>
+          <li><a href="#" data-i18n="cta.login">Нэвтрэх</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 data-i18n="foot.business">Бизнес</h2>
+        <ul><li><a href="#" data-i18n="nav.partner">Бизнес хамтрагч болох</a></li></ul>
+      </div>
+      <div>
+        <h2 data-i18n="foot.contact">Холбоо барих</h2>
+        <span class="phone"><svg class="icon" aria-hidden="true"><use href="#i-phone-call"/></svg>+976 9406 1666</span>
+      </div>
+    </div>
+  </div>
+  <div class="line-motif foot-line" aria-hidden="true"><img src="assets/elements/line-motif.png" alt="" width="849" height="195"></div>
+  <div class="wrap legal">
+    <span>© 2026 hairan.mn</span>
+    <span>
+      <a href="#" data-i18n="legal.pay">Төлбөрийн нөхцөл</a> ·
+      <a href="#" data-i18n="legal.terms">Үйлчилгээний нөхцөл</a> ·
+      <a href="#" data-i18n="legal.privacy">Нууцлалын бодлого</a> ·
+      <a href="design-system.html" data-i18n="legal.ds">Дизайн систем</a>
+    </span>
+    <span>Icons: Uicons by Flaticon · Photos: Pexels</span>
+  </div>
+</footer>
+
+<nav class="tabbar" aria-label="Апп цэс">
+  <a href="#top" aria-current="page"><svg class="icon" aria-hidden="true"><use href="#i-home"/></svg><span data-i18n="tab.home">Нүүр</span></a>
+  <a href="#"><svg class="icon" aria-hidden="true"><use href="#i-map"/></svg><span data-i18n="tab.map">Газрын зураг</span></a>
+  <a href="#"><svg class="icon" aria-hidden="true"><use href="#i-qr-scan"/></svg><span data-i18n="tab.scan">Уншуулах</span></a>
+  <a href="#"><svg class="icon" aria-hidden="true"><use href="#i-bookmark"/></svg><span data-i18n="tab.saved">Хадгалсан</span></a>
+  <a href="#"><svg class="icon" aria-hidden="true"><use href="#i-star"/></svg><span data-i18n="tab.points">Оноо</span></a>
+</nav>
+
+<button class="app-fab" type="button" data-app-open aria-haspopup="dialog">
+  <svg class="icon" aria-hidden="true"><use href="#i-smartphone"/></svg><span data-i18n="cta.appView">Апп үзэх</span>
+</button>
+
+<!-- App preview: the Hairan mobile app home screen, in a phone frame -->
+<dialog class="app-dialog" id="app-dialog" aria-labelledby="app-dialog-title">
+  <div class="app-stage">
+    <div class="app-side on-dark">
+      <img src="assets/logo/logo-icon.svg" alt="" width="56" height="57">
+      <h2 id="app-dialog-title" data-i18n="app.title">Хайран апп</h2>
+      <p data-i18n="app.desc">Апп-ын нүүр хуудасны загвар. Дотор нь гүйлгэж, ангилал, хадгалах товчийг туршиж үзээрэй.</p>
+      <button class="btn btn-secondary btn-sm" type="button" data-app-close><svg class="icon" aria-hidden="true"><use href="#i-cross"/></svg><span data-i18n="app.close">Хаах</span></button>
+    </div>
+    <div class="app-phone" role="group" aria-label="Апп">
+      <div class="phone-screen">
+        <div class="ph-status" aria-hidden="true"><span>9:41</span><span class="ph-notch"></span><span class="ph-sys"><i></i><i></i><i></i></span></div>
+        <div class="ph-scroll" id="ph-scroll">
+          <header class="ph-top">
+            <button class="ph-loc" type="button"><svg class="icon" aria-hidden="true"><use href="#i-marker"/></svg><span><small data-i18n="app.near">Таны байршил</small>Улаанбаатар</span></button>
+            <button class="ph-round" type="button" aria-label="Хадгалсан"><svg class="icon" aria-hidden="true"><use href="#i-bookmark"/></svg></button>
+          </header>
+          <label class="ph-search"><svg class="icon" aria-hidden="true"><use href="#i-search"/></svg><input type="search" id="ph-search" placeholder="Бэйкери, бүтээгдэхүүн хайх" data-i18n-ph="app.search"></label>
+          <div class="ph-hero">
+            <img src="assets/elements/line-logo-dark.webp" alt="" width="1195" height="1030">
+            <div>
+              <p class="ph-kicker" data-i18n="app.kicker">Азын уут</p>
+              <h3 data-i18n="app.heroTitle">Азын уутанд юу байх бол?</h3>
+              <span class="ph-tag" data-i18n="app.heroTag">2–3 дахин хямд</span>
+            </div>
+          </div>
+          <div class="ph-chips" id="ph-chips" role="group" aria-label="Ангилал">
+            <button type="button" data-k="all" aria-pressed="true" data-i18n="chip.all">Бүгд</button>
+            <button type="button" data-k="bread" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#i-bread"/></svg><span data-i18n="chip.bread">Талх</span></button>
+            <button type="button" data-k="pastry" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#i-croissant"/></svg><span data-i18n="chip.pastry">Нарийн боов</span></button>
+            <button type="button" data-k="cake" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#i-cake-birthday"/></svg><span data-i18n="chip.cake">Бялуу</span></button>
+          </div>
+          <div class="ph-sec"><h4 data-i18n="bags.title">Удахгүй дуусна</h4><span data-i18n="app.all">Бүгд</span></div>
+          <div class="ph-rail" id="ph-rail"></div>
+          <div class="ph-sec"><h4 data-i18n="tmr.title">Маргааш шинээр</h4><span data-i18n="app.all">Бүгд</span></div>
+          <ul class="ph-list" id="ph-list"></ul>
+        </div>
+        <nav class="ph-tabs" aria-label="Апп цэс">
+          <button type="button" aria-current="page"><svg class="icon" aria-hidden="true"><use href="#i-home"/></svg><span data-i18n="tab.home">Нүүр</span></button>
+          <button type="button"><svg class="icon" aria-hidden="true"><use href="#i-map"/></svg><span data-i18n="tab.map">Газрын зураг</span></button>
+          <button type="button" class="ph-scan" aria-label="Уншуулах"><svg class="icon" aria-hidden="true"><use href="#i-qr-scan"/></svg></button>
+          <button type="button"><svg class="icon" aria-hidden="true"><use href="#i-bookmark"/></svg><span data-i18n="tab.saved">Хадгалсан</span></button>
+          <button type="button"><svg class="icon" aria-hidden="true"><use href="#i-star"/></svg><span data-i18n="tab.points">Оноо</span></button>
+        </nav>
+        <div class="ph-home" aria-hidden="true"></div>
+      </div>
+    </div>
+  </div>
+</dialog>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

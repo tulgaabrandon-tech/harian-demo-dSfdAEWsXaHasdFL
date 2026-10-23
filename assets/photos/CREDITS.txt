@@ -1,0 +1,17 @@
+Demo product photos, cropped to 4:3. All from Pexels (free to use under the Pexels License, https://www.pexels.com/license/).
+Replace with real listing photos from the hairan.mn API.
+
+bake-01  Pexels photo 2245293 (zvolskiy)
+bake-02  Pexels photo 30233124 (Bruno Mattos)
+bake-03  Pexels photo 4177740 (Engin Akyurt)
+bake-04  Pexels photo 14380271 (Alex Albert)
+bake-05  Pexels photo 17486826 (dbaler)
+bake-06  Pexels photo 31228824 (Nguyễn Tiến Thịnh)
+bake-07  Pexels photo 4959896 (Kseniia Lopyreva)
+bake-08  Pexels photo 29380136 (Valeriya)
+bake-09  Pexels photo 15366687 (Valeriya)
+bake-10  Pexels photo 29548447 (Jason Shi)
+bake-11  Pexels photo 39240989 (Việt Anh Nguyễn)
+bake-12  Pexels photo 19651272 (Yulia Oliinychenko)
+bake-13  Pexels photo 13918179 (Raffaele Giordano)
+bake-14  Pexels photo 13760716 (Hüseyin Fatih Özden)

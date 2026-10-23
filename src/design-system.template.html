@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hairan Design System</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="icon" href="assets/logo/logo-icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/site.css">
+<link rel="stylesheet" href="css/ds.css">
+</head>
+<body>
+{{SPRITE}}
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Back to the homepage"><img src="assets/logo/logotype.svg" alt="hairan" width="158" height="41"></a>
+    <nav class="nav" aria-label="Documentation"><a href="index.html">← Homepage</a></nav>
+    <span class="label">Design system · v1 · Oct 2026</span>
+  </div>
+</header>
+
+<section class="ds-head on-dark">
+  <div class="wrap">
+    <h1>Hairan design system</h1>
+    <p>The assets, components and layout rules used on the hairan.mn homepage. Everything shown here is the live CSS from <code>css/tokens.css</code> and <code>css/site.css</code>, so what you see is what ships.</p>
+  </div>
+  <div class="line-motif" aria-hidden="true"><img src="assets/elements/line-motif.png" alt="" width="849" height="195"></div>
+</section>
+
+<div class="wrap ds">
+  <nav class="toc" aria-label="Contents">
+    <small>Brand</small>
+    <a href="#logo">Logo</a><a href="#colour">Colour</a><a href="#type">Typography</a><a href="#elements">Graphic elements</a><a href="#icons">Icons</a>
+    <small>Interface</small>
+    <a href="#buttons">Buttons &amp; links</a><a href="#tags">Chips &amp; badges</a><a href="#containers">Listings &amp; containers</a><a href="#nav">Navigation</a>
+    <small>Layout</small>
+    <a href="#app">App preview</a><a href="#layout">Grid, spacing, radii</a><a href="#breakpoints">Breakpoints</a><a href="#files">Files</a>
+  </nav>
+
+  <div class="doc">
+    <!-- LOGO -->
+    <section id="logo">
+      <h2>Logo</h2>
+      <p class="intro">The logo has two parts: the logotype and the bag-and-heart icon. They are used separately. The supplied SVGs are used untouched, with no recolouring, stretching or effects.</p>
+      <div class="grid3" style="margin-top:24px">
+        <div class="specimen"><div class="logo-stage" style="background:var(--coconut)"><img src="assets/logo/logotype.svg" alt="hairan logotype, Spinach"></div><div class="spec"><b>Logotype</b> logotype.svg · header</div></div>
+        <div class="specimen"><div class="logo-stage" style="background:var(--blackberry)"><img src="assets/logo/logotype-white.svg" alt="hairan logotype, Coconut"></div><div class="spec"><b>Logotype, light</b> logotype-white.svg · footer</div></div>
+        <div class="specimen"><div class="logo-stage icon-stage" style="background:var(--coconut)"><img src="assets/logo/logo-icon.svg" alt="hairan icon"></div><div class="spec"><b>Icon</b> logo-icon.svg · favicon</div></div>
+      </div>
+      <h3>Where each part is used</h3>
+      <div class="scroll"><table class="table">
+        <tr><th>Place</th><th>Asset</th><th>Size</th></tr>
+        <tr><td>Header (all widths)</td><td>Logotype alone, Spinach</td><td>30px tall, 26px below 420px</td></tr>
+        <tr><td>Footer</td><td>Logotype alone, Coconut letters</td><td>34px tall</td></tr>
+        <tr><td>Browser tab</td><td>Icon</td><td>favicon (SVG)</td></tr>
+        <tr><td>Hero, How it works</td><td>Icon as oversized graphic element (see below)</td><td>cropped, bleeds off the edge</td></tr>
+      </table></div>
+      <p class="note">The supplied guidelines don't specify clear space. On the site the logotype keeps at least 24px of free space on every side, which is more than the height of its lowercase letters. Full-logo files (icon + logotype) were supplied but aren't used on the homepage.</p>
+    </section>
+
+    <!-- COLOUR -->
+    <section id="colour">
+      <h2>Colour</h2>
+      <p class="intro">Seven brand colours plus the Green Apple gradient. Coconut and Blackberry carry most of the page; greens carry the brand; Honey only marks time and deals.</p>
+      <div class="swatches" style="margin-top:24px">
+        <div class="sw"><div class="chipc" style="background:var(--coconut);border-bottom:1px solid var(--line)"></div><div><b>Coconut</b><span>#F2F7EF · page ground</span></div></div>
+        <div class="sw"><div class="chipc" style="background:var(--blackberry)"></div><div><b>Blackberry</b><span>#17132B · text, dark sections</span></div></div>
+        <div class="sw"><div class="chipc" style="background:var(--spinach)"></div><div><b>Spinach</b><span>#0B420D · logotype, headings</span></div></div>
+        <div class="sw"><div class="chipc" style="background:var(--kale)"></div><div><b>Kale</b><span>#00731A · buttons, links, icons</span></div></div>
+        <div class="sw"><div class="chipc" style="background:var(--basil)"></div><div><b>Basil</b><span>#009618 · How it works, pattern ground</span></div></div>
+        <div class="sw"><div class="chipc" style="background:var(--lime)"></div><div><b>Lime</b><span>#74D341 · accents and buttons on dark</span></div></div>
+        <div class="sw"><div class="chipc" style="background:var(--honey)"></div><div><b>Honey</b><span>#FFB938 · discount badge, focus ring</span></div></div>
+        <div class="sw"><div class="chipc" style="background:var(--green-apple)"></div><div><b>Green Apple</b><span>radial #74D341 → #009618</span></div></div>
+      </div>
+      <h3>Derived neutrals</h3>
+      <div class="swatches">
+        <div class="sw"><div class="chipc" style="background:var(--coconut-2)"></div><div><b>Coconut 2</b><span>#E6EFE1 · image wells</span></div></div>
+        <div class="sw"><div class="chipc" style="background:var(--line)"></div><div><b>Line</b><span>#D5E2CF · hairlines</span></div></div>
+        <div class="sw"><div class="chipc" style="background:var(--muted)"></div><div><b>Muted</b><span>#4E5A4F · secondary text</span></div></div>
+        <div class="sw"><div class="chipc" style="background:var(--muted-dark)"></div><div><b>Muted on dark</b><span>#B9B5D3 · secondary text on Blackberry</span></div></div>
+      </div>
+      <h3>Text pairs used on the site</h3>
+      <div class="pairs">
+        <div class="pair" style="background:var(--coconut);color:var(--blackberry);border:1px solid var(--line)">Blackberry on Coconut<span>16.6 : 1 · body</span></div>
+        <div class="pair" style="background:var(--coconut);color:var(--spinach);border:1px solid var(--line)">Spinach on Coconut<span>10.7 : 1 · headings</span></div>
+        <div class="pair" style="background:var(--kale);color:var(--white)">White on Kale<span>6.1 : 1 · primary button</span></div>
+        <div class="pair" style="background:var(--blackberry);color:var(--lime)">Lime on Blackberry<span>9.6 : 1 · accents on dark</span></div>
+        <div class="pair" style="background:var(--honey);color:var(--blackberry)">Blackberry on Honey<span>10.5 : 1 · discount badge</span></div>
+        <div class="pair" style="background:var(--basil);color:var(--blackberry)">Blackberry on Basil<span>4.6 : 1 · How it works</span></div>
+      </div>
+      <p class="note">Avoid: Lime or Honey as text on Coconut (under 2 : 1), and Spinach on Blackberry (1.6 : 1).</p>
+    </section>
+
+    <!-- TYPE -->
+    <section id="type">
+      <h2>Typography</h2>
+      <p class="intro">Nunito for headlines, prices and short labels; Manrope for everything you read. Both cover Mongolian Cyrillic, including Ө and Ү. Embedded in <code>css/fonts.css</code> so the page works offline.</p>
+      <div style="margin-top:24px">
+        <div class="type-row"><div class="k"><b>Display</b>Nunito 900 · 42→72px / 1.02</div><div class="s" style="font:900 var(--fs-display)/1.02 var(--font-display);letter-spacing:-.015em">Өнөөдрийн илүүдэл</div></div>
+        <div class="type-row"><div class="k"><b>H2</b>Nunito 900 · 30→44px / 1.05</div><div class="s" style="font:900 var(--fs-h2)/1.05 var(--font-display);color:var(--spinach)">Удахгүй дуусна</div></div>
+        <div class="type-row"><div class="k"><b>H3</b>Nunito 800 · 20→24px / 1.2</div><div class="s" style="font:800 var(--fs-h3)/1.2 var(--font-display)">Авах кодоо ав</div></div>
+        <div class="type-row"><div class="k"><b>Price</b>Nunito 900 · 22px</div><div class="s"><span class="price"><b>18,000₮</b><s>54,000₮</s></span></div></div>
+        <div class="type-row"><div class="k"><b>Lead</b>Manrope 400 · 17→19px / 1.55</div><div class="s" style="font-size:var(--fs-lead);line-height:1.55">Дэлгүүрүүд тухайн өдөр зарж амжаагүй сайн хоолоо уутлан зардаг.</div></div>
+        <div class="type-row"><div class="k"><b>Body</b>Manrope 400 · 16px / 1.6</div><div class="s">Авах цаг эхлэхээс 3 цагийн өмнө цуцалбал мөнгийг бүтнээр буцаана.</div></div>
+        <div class="type-row"><div class="k"><b>Meta</b>Manrope 600 · 14px</div><div class="s" style="font:600 var(--fs-small)/1.35 var(--font-body);color:var(--muted)">Азын уут · Чингэлтэй · Өнөөдөр 14:00–20:00</div></div>
+        <div class="type-row"><div class="k"><b>Label</b>Manrope 800 · 12px · caps +14%</div><div class="s"><span class="label">Азын уут гэж юу вэ?</span></div></div>
+      </div>
+      <p class="note">Sizes between the two numbers scale fluidly with <code>clamp()</code>; see the <code>--fs-*</code> tokens.</p>
+    </section>
+
+    <!-- ELEMENTS -->
+    <section id="elements">
+      <h2>Graphic elements</h2>
+      <p class="intro">Every element grows from the bag-and-heart symbol. The tube elements were rendered from the supplied guideline PDF at 5×, because their shaded gradients don't survive SVG export.</p>
+
+      <h3>Oversized line logo</h3>
+      <div class="specimen"><img class="el-img" src="assets/elements/line-logo-dark.webp" alt="Oversized outline logo on Blackberry" style="background:var(--blackberry)"><div class="spec"><b>Used in</b> hero, anchored bottom-right, bleeding off the right and bottom edges · <b>File</b> line-logo-dark.webp (Blackberry baked in) · <b>Rule</b> only on Blackberry, always bleeding off an edge</div></div>
+
+      <h3>Continuous line motif</h3>
+      <div class="specimen">
+        <div class="motif-demo"><div class="line-motif" aria-hidden="true"><img src="assets/elements/line-motif.png" alt=""></div></div>
+        <div class="motif-parts">
+          <figure><img src="assets/elements/line-slice.png" alt="1px line slice" style="width:12px"><figcaption>line-slice.png<br>1px, repeats</figcaption></figure>
+          <figure><img src="assets/elements/line-motif.png" alt="Heart loop"><figcaption>line-motif.png · heart loop, transparent</figcaption></figure>
+        </div>
+        <div class="spec"><b>Used in</b> footer and this page's header · <b>Build</b> <code>.line-motif</code> with <code>--h</code> (height) and <code>--x</code> (loop position); the slice fills both sides so the line runs edge to edge at any width · <b>Rule</b> extend with the slice, never stretch the loop image</div>
+      </div>
+
+      <h3>Oversized solid logo</h3>
+      <div class="specimen"><img class="el-img" src="assets/elements/solid-logo-basil.webp" alt="Oversized solid logo on Basil" style="background:var(--basil)"><div class="spec"><b>Used in</b> How it works, anchored top-right behind the steps · <b>File</b> solid-logo-basil.webp (Basil baked in) · <b>Rule</b> only on Basil</div></div>
+
+      <h3>Repeating pattern</h3>
+      <div class="specimen"><div style="height:220px;background:var(--basil) url(assets/elements/pattern.svg) center/4200px auto"></div><div class="spec"><b>Used in</b> Become a partner band, behind a Blackberry panel · <b>File</b> pattern.svg, Kale glyphs at 38% opacity on a Basil ground · <b>Build</b> rebuilt from the supplied Pattern.svg as an SVG <code>&lt;pattern&gt;</code> (38.05 × 68.95 cell, rotated 10.33°) so it tiles without seams · <b>Rule</b> never put text directly on the pattern</div></div>
+    </section>
+
+    <!-- ICONS -->
+    <section id="icons">
+      <h2>Icons</h2>
+      <p class="intro">UIcons by Flaticon, Bold Rounded set, matching Nunito's rounded strokes. Converted from the icon font into one SVG sprite (<code>assets/icons/sprite.svg</code>) so only the icons used are shipped. The sprite is inlined at the top of each page (by <code>src/build.py</code>) so icons work offline. Use with <code>&lt;svg class="icon"&gt;&lt;use href="#i-NAME"/&gt;&lt;/svg&gt;</code>; they take <code>currentColor</code>. Credit "Uicons by Flaticon" is required (it's in the footer).</p>
+      <div class="icons-grid" style="margin-top:24px" id="icon-grid"></div>
+    </section>
+
+    <!-- BUTTONS -->
+    <section id="buttons">
+      <h2>Buttons &amp; links</h2>
+      <p class="intro">Two button types, square-shouldered (12px radius) to echo the bag's corners. Minimum height 48px (40px for the small header size). Labels in Nunito 800.</p>
+      <div class="specimen" style="margin-top:24px">
+        <div class="stage coco">
+          <div class="state"><a class="btn btn-primary" href="#buttons">Азын уут үзэх</a>Primary</div>
+          <div class="state"><a class="btn btn-primary is-hover" href="#buttons">Азын уут үзэх</a>Hover</div>
+          <div class="state"><a class="btn btn-primary is-focus" href="#buttons">Азын уут үзэх</a>Focus</div>
+          <div class="state"><a class="btn btn-primary" aria-disabled="true">Азын уут үзэх</a>Disabled</div>
+        </div>
+        <div class="stage coco" style="border-top:1px solid var(--line)">
+          <div class="state"><a class="btn btn-secondary" href="#buttons">Бусад уутыг харах</a>Secondary</div>
+          <div class="state"><a class="btn btn-secondary is-hover" href="#buttons">Бусад уутыг харах</a>Hover</div>
+          <div class="state"><a class="btn btn-primary btn-sm" href="#buttons">Нэвтрэх</a>Small</div>
+        </div>
+        <div class="spec"><b>Primary</b> Kale / white → Spinach on hover · <b>Secondary</b> 2px Kale outline → filled Kale · <b>Focus</b> 3px Honey ring, 2px offset · <b>Disabled</b> 45% opacity, no pointer</div>
+      </div>
+      <div class="specimen">
+        <div class="stage dark on-dark">
+          <div class="state"><a class="btn btn-primary" href="#buttons">Азын уут үзэх</a>Primary on dark</div>
+          <div class="state"><a class="btn btn-primary is-hover" href="#buttons">Азын уут үзэх</a>Hover</div>
+          <div class="state"><a class="btn btn-secondary" href="#buttons">Газрын зураг</a>Secondary on dark</div>
+        </div>
+        <div class="spec"><b>On Blackberry</b> (<code>.on-dark</code>) primary becomes Lime with Blackberry text, hovering to Coconut; secondary uses a Coconut outline.</div>
+      </div>
+      <div class="specimen">
+        <div class="stage coco"><a class="link-arrow" href="#buttons">Бүгдийг газрын зураг дээр<svg class="icon" aria-hidden="true"><use href="#i-arrow-small-right"/></svg></a><span style="margin-left:24px"><a href="#buttons">Inline text link</a></span></div>
+        <div class="spec"><b>Arrow link</b> section-level "see all" links, Nunito 800 Kale, arrow nudges 3px on hover · <b>Inline link</b> Kale, underlined, Spinach on hover</div>
+      </div>
+    </section>
+
+    <!-- TAGS -->
+    <section id="tags">
+      <h2>Chips &amp; badges</h2>
+      <div class="specimen" style="margin-top:24px">
+        <div class="stage coco">
+          <button class="chip" type="button" aria-pressed="true">Бүгд</button>
+          <button class="chip" type="button" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#i-bread"/></svg>Талх</button>
+          <button class="chip" type="button" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#i-croissant"/></svg>Нарийн боов</button><button class="chip" type="button" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#i-cake-birthday"/></svg>Бялуу</button>
+        </div>
+        <div class="spec"><b>Filter chip</b> 40px, 8px radius, white with Line border; selected = Blackberry fill (<code>aria-pressed="true"</code>). Filters the Ending soon grid by product type; an empty category shows an empty state.</div>
+      </div>
+      <div class="specimen">
+        <div class="stage coco" style="gap:24px">
+          <span class="save" style="position:static">−67%</span>
+          <span class="left" style="position:static"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>55 мин</span>
+          <span class="new" style="margin:0">Шинэ</span>
+          <span class="lang"><button type="button" aria-pressed="true">МН</button><button type="button" aria-pressed="false">EN</button></span>
+        </div>
+        <div class="spec"><b>Discount</b> Honey, Nunito 900, the first thing you see on a listing; computed from the real old and new price · <b>Time left</b> Blackberry with a Lime clock · <b>New</b> Lime, tomorrow's bags · <b>Language switch</b> segmented, 8px radius</div>
+      </div>
+    </section>
+
+    <!-- CONTAINERS -->
+    <section id="containers">
+      <h2>Listings &amp; containers</h2>
+      <p class="intro">Only the bag listings are cards, because they are the products. Everything else is set as rows, rules or plain text on the ground.</p>
+      <div class="grid2" style="margin-top:24px">
+        <div class="specimen"><div class="stage coco" style="display:block">
+          <a class="bag" href="#containers" style="max-width:300px">
+            <div class="bag-well"><img src="assets/photos/bake-13.webp" alt=""><span class="save">−67%</span><span class="left"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>55 мин</span></div>
+            <h3>OPERA Patisserie Mongolia</h3>
+            <div class="meta"><span><svg class="icon" aria-hidden="true"><use href="#i-marker"/></svg>Азын уут · Чингэлтэй</span><span><svg class="icon" aria-hidden="true"><use href="#i-time-fast"/></svg>Өнөөдөр 14:00–20:00</span></div>
+            <div class="price"><b>18,000₮</b><s>54,000₮</s></div>
+          </a></div>
+          <div class="spec"><b>Bag listing</b> 4:3 photo (20px radius); demo photos from Pexels until listing photos come from the API · 4 columns → 3 → 2 → compact row under 560px</div></div>
+        <div class="specimen"><div class="stage coco" style="display:block">
+          <ul class="rows" style="max-width:420px"><li class="row"><a href="#containers"><span class="row-ic"><img src="assets/photos/bake-09.webp" alt=""></span><span><span class="row-name">Magic Bakery</span><span class="new">Шинэ</span><span class="row-sub" style="display:block">Азын уут · Баянгол · Маргааш</span></span><span class="price"><b>7,000₮</b><s>21,000₮</s></span><span class="go"><svg class="icon" aria-hidden="true"><use href="#i-arrow-small-right"/></svg></span></a></li></ul>
+          <ol class="steps" style="margin-top:24px;background:var(--basil);padding:16px;border-radius:20px"><li class="step"><div><h3>Уутаа сонго</h3><p>Апп эсвэл сайтаас Азын уутаа сонгоно.</p></div></li></ol>
+          </div>
+          <div class="spec"><b>Row</b> tomorrow's bags; 2px Blackberry top rule, hairlines between · <b>Step</b> Coconut panel on Basil, numbered because the order matters</div></div>
+      </div>
+      <div class="specimen">
+        <div class="stage coco" style="display:block"><div class="rules" style="grid-template-columns:repeat(2,minmax(0,1fr))">
+          <div class="rule"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg><h3>Цуцлах</h3><p>Авах цаг эхлэхээс 3 цагийн өмнө цуцалбал мөнгийг бүтнээр буцаана.</p></div>
+          <div class="rule"><svg class="icon" aria-hidden="true"><use href="#i-star"/></svg><h3>Буцаан олголт</h3><p>Оноогоор шууд (1 оноо = 1₮) эсвэл 24 цагийн дотор дансаар.</p></div>
+        </div></div>
+        <div class="spec"><b>Rule column</b> separated by vertical hairlines, no boxes · <b>Feature panel</b> Blackberry, 28px radius, used once (partner band)</div>
+      </div>
+    </section>
+
+    <!-- NAV -->
+    <section id="nav">
+      <h2>Navigation</h2>
+      <div class="scroll"><table class="table" style="margin-top:24px">
+        <tr><th>Width</th><th>Header</th><th>Other</th></tr>
+        <tr><td>&gt; 960px</td><td>Logotype · 3 text links · МН/EN · App (secondary) · Log in (primary). Sticky, Coconut with a bottom hairline.</td><td>Links underline in Kale on hover.</td></tr>
+        <tr><td>≤ 960px</td><td>Logotype · МН/EN · Log in · menu button. The menu opens a full-width drop panel; Esc closes it.</td><td></td></tr>
+        <tr><td>≤ 760px</td><td>As above</td><td>Fixed bottom tab bar mirroring the app: Нүүр, Газрын зураг, Уншуулах, Хадгалсан, Оноо. Body gets bottom padding so nothing hides under it.</td></tr>
+      </table></div>
+      <h3>Tab bar</h3>
+      <div class="tab-demo">
+        <a href="#nav" aria-current="page"><svg class="icon" aria-hidden="true"><use href="#i-home"/></svg>Нүүр</a>
+        <a href="#nav"><svg class="icon" aria-hidden="true"><use href="#i-map"/></svg>Газрын зураг</a>
+        <a href="#nav"><svg class="icon" aria-hidden="true"><use href="#i-qr-scan"/></svg>Уншуулах</a>
+        <a href="#nav"><svg class="icon" aria-hidden="true"><use href="#i-bookmark"/></svg>Хадгалсан</a>
+        <a href="#nav"><svg class="icon" aria-hidden="true"><use href="#i-star"/></svg>Оноо</a>
+      </div>
+    </section>
+
+    <!-- APP -->
+    <section id="app">
+      <h2>App preview</h2>
+      <p class="intro">A popup showing the Hairan app home screen, opened from the "Апп үзэх" button in the header, the floating button (bottom-right) and the mobile menu. It uses the same tokens as the site, adapted to mobile patterns.</p>
+      <div class="scroll"><table class="table" style="margin-top:24px">
+        <tr><th>Part</th><th>Mobile decision</th></tr>
+        <tr><td>Top bar</td><td>Location picker (Kale marker) and a saved shortcut; 44px touch targets, 14px radius</td></tr>
+        <tr><td>Search</td><td>48px field, Kale focus ring</td></tr>
+        <tr><td>Promo card</td><td>Blackberry card with the oversized line logo cropped into the corner; Honey "2–3 дахин хямд" tag</td></tr>
+        <tr><td>Categories</td><td>Horizontally scrolling chips (Бүгд, Талх, Нарийн боов, Бялуу), working filter</td></tr>
+        <tr><td>Ending soon</td><td>Snap carousel of 244px cards: photo, Honey discount, time left, save toggle, add-to-bag button</td></tr>
+        <tr><td>Tomorrow</td><td>Grouped list in one white container, 52px thumbnails</td></tr>
+        <tr><td>Tab bar</td><td>Five tabs with a raised Blackberry scan button in the centre (Уншуулах), as the primary in-store action</td></tr>
+        <tr><td>Frame</td><td>390 × 844 phone on desktop; on phones the preview fills the screen without the frame</td></tr>
+      </table></div>
+    </section>
+
+    <!-- LAYOUT -->
+    <section id="layout">
+      <h2>Grid, spacing, radii</h2>
+      <div class="scroll"><table class="table" style="margin-top:24px">
+        <tr><th>Token</th><th>Value</th><th>Use</th></tr>
+        <tr><td><code>--content</code></td><td>1200px</td><td>Max content width, centred</td></tr>
+        <tr><td><code>--gutter</code></td><td>max(20px, safe-area)</td><td>Side padding at every width</td></tr>
+        <tr><td><code>--header-h</code></td><td>72px</td><td>Sticky header</td></tr>
+        <tr><td><code>--tabbar-h</code></td><td>64px</td><td>Mobile tab bar</td></tr>
+      </table></div>
+      <h3>Spacing scale</h3>
+      <div class="scale">
+        <div>4 · s-1<i style="width:4px"></i></div><div>8 · s-2<i style="width:8px"></i></div><div>12 · s-3<i style="width:12px"></i></div><div>16 · s-4<i style="width:16px"></i></div>
+        <div>24 · s-5<i style="width:24px"></i></div><div>32 · s-6<i style="width:32px"></i></div><div>48 · s-7<i style="width:48px"></i></div><div>72 · s-8<i style="width:72px"></i></div><div>112 · s-9<i style="width:112px"></i></div>
+      </div>
+      <p class="note">Sections are separated by 72px (s-8); feature bands (How it works, partner) by 112px (s-9).</p>
+      <h3>Radii</h3>
+      <div class="radii">
+        <div style="border-radius:8px">8px<br>badges, chips</div><div style="border-radius:12px">12px<br>buttons</div><div style="border-radius:20px">20px<br>wells, steps</div><div style="border-radius:28px">28px<br>feature panel</div>
+      </div>
+      <p class="note">No drop shadows. Separation comes from colour blocks and hairlines (1px Line) with a 2px Blackberry rule opening each list.</p>
+    </section>
+
+    <section id="breakpoints">
+      <h2>Breakpoints</h2>
+      <div class="scroll"><table class="table" style="margin-top:24px">
+        <tr><th>Max width</th><th>Change</th></tr>
+        <tr><td>1080px</td><td>Listing grid 4 → 3 columns</td></tr>
+        <tr><td>960px</td><td>Header collapses to menu button; rules grid 4 → 2</td></tr>
+        <tr><td>900px</td><td>How it works stacks; partner index 3 → 2 columns</td></tr>
+        <tr><td>860px</td><td>Hero stacks, oversized logo moves below the copy; footer 4 → 2 columns</td></tr>
+        <tr><td>780px</td><td>Listing grid 3 → 2 columns</td></tr>
+        <tr><td>760px</td><td>Bottom tab bar appears</td></tr>
+        <tr><td>560px</td><td>Listings become compact rows; rules and partner index single column</td></tr>
+      </table></div>
+    </section>
+
+    <section id="files">
+      <h2>Files</h2>
+      <div class="scroll"><table class="table" style="margin-top:24px">
+        <tr><th>Path</th><th>What</th></tr>
+        <tr><td><code>css/tokens.css</code></td><td>Colour, type, spacing, radius, layout tokens</td></tr>
+        <tr><td><code>css/site.css</code></td><td>Homepage components</td></tr>
+        <tr><td><code>css/app.css</code></td><td>App preview launcher, dialog and app screen</td></tr>
+        <tr><td><code>css/fonts.css</code></td><td>Nunito + Manrope embedded (latin, latin-ext, cyrillic, cyrillic-ext)</td></tr>
+        <tr><td><code>js/data.js</code></td><td>Listing snapshot from hairan.mn (23 Oct 2026); swap for the API feed</td></tr>
+        <tr><td><code>assets/photos/</code></td><td>Demo bakery photos (Pexels), see CREDITS.txt</td></tr>
+        <tr><td><code>src/</code></td><td>Page templates; <code>python3 src/build.py</code> inlines the icon sprite</td></tr>
+        <tr><td><code>js/main.js</code></td><td>Listing render, filter, show more, menu, МН/EN</td></tr>
+        <tr><td><code>assets/logo/</code></td><td>Supplied logo SVGs, unchanged</td></tr>
+        <tr><td><code>assets/elements/</code></td><td>Tube elements rendered from the guideline PDF; rebuilt pattern; line slice</td></tr>
+        <tr><td><code>assets/icons/</code></td><td>UIcons Bold Rounded: sprite + individual SVGs</td></tr>
+      </table></div>
+    </section>
+  </div>
+</div>
+
+<footer class="site-footer on-dark" style="padding-top:0">
+  <div class="wrap legal"><span>© 2026 hairan.mn</span><a href="index.html">Back to the homepage</a><span>Icons: Uicons by Flaticon · Photos: Pexels</span></div>
+</footer>
+<script>
+(function(){
+  var names=["shopping-bag","bread","croissant","cake-birthday","clock","time-fast","hourglass-end","marker","map","qr-scan","bookmark","star","home","store-alt","smartphone","phone-call","box-open","check","arrow-small-right","menu-burger"];
+  document.getElementById("icon-grid").innerHTML=names.map(function(n){return '<div class="ic"><svg class="icon" aria-hidden="true"><use href="#i-'+n+'"/></svg>'+n+'</div>';}).join("");
+})();
+</script>
+</body>
+</html>
