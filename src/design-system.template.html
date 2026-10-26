@@ -36,7 +36,7 @@
     <small>Interface</small>
     <a href="#buttons">Buttons &amp; links</a><a href="#tags">Chips &amp; badges</a><a href="#containers">Listings &amp; containers</a><a href="#nav">Navigation</a>
     <small>Layout</small>
-    <a href="#app">App preview</a><a href="#layout">Grid, spacing, radii</a><a href="#breakpoints">Breakpoints</a><a href="#files">Files</a>
+    <a href="#app">App preview</a><a href="#dark">Dark mode</a><a href="#layout">Grid, spacing, radii</a><a href="#breakpoints">Breakpoints</a><a href="#files">Files</a>
   </nav>
 
   <div class="doc">
@@ -260,6 +260,24 @@
       </table></div>
     </section>
 
+    <!-- DARK -->
+    <section id="dark">
+      <h2>Dark mode</h2>
+      <p class="intro">A sun / moon switch in the header toggles the theme; the choice is remembered, and first-time visitors get their system setting. Defined in <code>css/dark.css</code> as overrides under <code>[data-theme="dark"]</code>, so the light theme is untouched.</p>
+      <div class="scroll"><table class="table" style="margin-top:24px">
+        <tr><th>Role</th><th>Light</th><th>Dark</th></tr>
+        <tr><td>Page ground</td><td>Coconut #F2F7EF</td><td>#100D20 (a step under Blackberry)</td></tr>
+        <tr><td>Chips, cards, bars</td><td>White</td><td>#1C1833</td></tr>
+        <tr><td>Image wells</td><td>Coconut 2 #E6EFE1</td><td>#262043</td></tr>
+        <tr><td>Text / headings</td><td>Blackberry / Spinach</td><td>Coconut</td></tr>
+        <tr><td>Links, icons, prices</td><td>Kale / Spinach</td><td>Lime</td></tr>
+        <tr><td>Primary button</td><td>Kale, white text</td><td>Lime, Blackberry text</td></tr>
+        <tr><td>Selected chip, language</td><td>Blackberry</td><td>Coconut, Blackberry text</td></tr>
+        <tr><td>Logotype</td><td>logotype.svg</td><td>logotype-white.svg</td></tr>
+        <tr><td>Unchanged</td><td colspan="2">Hero, How it works (Basil), partner band, Honey discount badges</td></tr>
+      </table></div>
+    </section>
+
     <!-- LAYOUT -->
     <section id="layout">
       <h2>Grid, spacing, radii</h2>
@@ -304,6 +322,7 @@
         <tr><td><code>css/tokens.css</code></td><td>Colour, type, spacing, radius, layout tokens</td></tr>
         <tr><td><code>css/site.css</code></td><td>Homepage components</td></tr>
         <tr><td><code>css/app.css</code></td><td>App preview launcher, dialog and app screen</td></tr>
+        <tr><td><code>css/dark.css</code></td><td>Dark theme overrides and the theme switch</td></tr>
         <tr><td><code>css/fonts.css</code></td><td>Nunito + Manrope embedded (latin, latin-ext, cyrillic, cyrillic-ext)</td></tr>
         <tr><td><code>js/data.js</code></td><td>Listing snapshot from hairan.mn (23 Oct 2026); swap for the API feed</td></tr>
         <tr><td><code>assets/photos/</code></td><td>Demo bakery photos (Pexels), see CREDITS.txt</td></tr>

@@ -11,6 +11,16 @@
 <link rel="stylesheet" href="css/tokens.css">
 <link rel="stylesheet" href="css/site.css">
 <link rel="stylesheet" href="css/app.css">
+<link rel="stylesheet" href="css/dark.css">
+<script>
+  /* Apply the saved theme (or the system preference) before first paint, so there is no flash. */
+  (function () {
+    var t = null;
+    try { t = localStorage.getItem("hairan-theme"); } catch (e) {}
+    if (!t) t = window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    document.documentElement.setAttribute("data-theme", t);
+  })();
+</script>
 </head>
 <body>
 {{SPRITE}}
@@ -18,13 +28,16 @@
 
 <header class="site-header">
   <div class="wrap">
-    <a class="brand" href="#top" aria-label="hairan"><img src="assets/logo/logotype.svg" alt="hairan" width="158" height="41"></a>
+    <a class="brand" href="#top" aria-label="hairan"><img class="logo-light" src="assets/logo/logotype.svg" alt="hairan" width="158" height="41"><img class="logo-dark" src="assets/logo/logotype-white.svg" alt="hairan" width="158" height="41"></a>
     <nav class="nav" aria-label="Үндсэн цэс">
       <a href="#" data-i18n="nav.map">Газрын зураг</a>
       <a href="#" data-i18n="nav.guide">Хэрэглэх заавар</a>
       <a href="#" data-i18n="nav.partner">Бизнес хамтрагч болох</a>
     </nav>
     <div class="header-tools">
+      <button class="theme-btn" type="button" id="theme-btn" aria-label="Харанхуй горим">
+        <svg class="icon i-light" aria-hidden="true"><use href="#i-moon"/></svg><svg class="icon i-dark" aria-hidden="true"><use href="#i-sun"/></svg>
+      </button>
       <div class="lang" role="group" aria-label="Хэл / Language">
         <button type="button" id="lang-mn" aria-pressed="true">МН</button>
         <button type="button" id="lang-en" aria-pressed="false">EN</button>
@@ -40,6 +53,7 @@
     <a href="#"><svg class="icon" aria-hidden="true"><use href="#i-map"/></svg><span data-i18n="nav.map">Газрын зураг</span></a>
     <a href="#"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="nav.guide">Хэрэглэх заавар</span></a>
     <a href="#"><svg class="icon" aria-hidden="true"><use href="#i-store-alt"/></svg><span data-i18n="nav.partner">Бизнес хамтрагч болох</span></a>
+    <a href="#" class="mn-login"><svg class="icon" aria-hidden="true"><use href="#i-user"/></svg><span data-i18n="cta.login">Нэвтрэх</span></a>
     <button type="button" class="mn-btn" data-app-open><svg class="icon" aria-hidden="true"><use href="#i-smartphone"/></svg><span data-i18n="cta.appView">Апп үзэх</span></button>
   </nav>
 </header>

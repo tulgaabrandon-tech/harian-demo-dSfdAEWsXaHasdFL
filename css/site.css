@@ -60,7 +60,12 @@ p{margin:0}
   .mobile-nav a .icon,.mobile-nav .mn-btn .icon{color:var(--kale)}
   .mobile-nav .mn-btn{display:flex;align-items:center;gap:12px;width:100%;padding:14px 0;border:0;border-bottom:1px solid var(--line);background:none;color:var(--blackberry);font:700 1.0625rem/1.2 var(--font-body);cursor:pointer;text-align:left}
 }
-@media (max-width:420px){.brand img{height:26px}.header-tools .btn-primary{padding:0 14px}}
+.mobile-nav .mn-login{display:none}
+@media (max-width:480px){
+  .brand img{height:26px}
+  .header-tools .btn-primary{display:none}
+  .mobile-nav .mn-login{display:flex}
+}
 
 /* ---------- Hero ---------- */
 .hero{position:relative;background:var(--blackberry);color:var(--coconut);overflow:hidden;isolation:isolate}

@@ -18,12 +18,13 @@ If you change an icon or a page, edit `src/*.template.html` and run `python3 src
 ## Structure
 
 ```
-index.html              homepage (Mongolian, with МН / EN switch)
+index.html              homepage (Mongolian, МН / EN switch, light / dark switch)
 design-system.html      brand + component documentation
 css/fonts.css           Nunito + Manrope embedded as data URIs (SIL OFL)
 css/tokens.css          colours, type scale, spacing, radii, layout tokens
 css/site.css            homepage components
 css/app.css             app preview: launcher, dialog, app home screen
+css/dark.css            dark theme ([data-theme="dark"] overrides) + theme switch
 css/ds.css              documentation-page layout only
 js/data.js              listing snapshot from hairan.mn (23 Oct 2026)
 js/main.js              renders listings, filter, show more, mobile menu, language switch

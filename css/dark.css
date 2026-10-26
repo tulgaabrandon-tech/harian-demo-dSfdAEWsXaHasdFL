@@ -1,0 +1,109 @@
+/* Dark theme. Activated by <html data-theme="dark"> (set by the header switch, or by the
+   system preference on first visit). Brand colours stay the same; only grounds, text and
+   accents swap: Blackberry-family grounds, Coconut text, Lime replaces Kale/Spinach accents. */
+
+/* ---------- Theme switch (both themes) ---------- */
+.theme-btn{width:40px;height:40px;border:1px solid var(--line);border-radius:var(--r-sm);background:transparent;color:var(--blackberry);
+  display:inline-grid;place-items:center;font-size:18px;cursor:pointer;flex:none}
+.theme-btn:hover{border-color:var(--kale);color:var(--kale)}
+.theme-btn .i-dark{display:none}
+[data-theme="dark"] .theme-btn .i-light{display:none}
+[data-theme="dark"] .theme-btn .i-dark{display:block}
+.brand .logo-dark{display:none}
+[data-theme="dark"] .brand .logo-light{display:none}
+[data-theme="dark"] .brand .logo-dark{display:block}
+
+[data-theme="dark"]{
+  color-scheme:dark;
+  --d-bg:#100D20;        /* page ground, a shade under Blackberry */
+  --d-surface:#1C1833;   /* chips, cards, bars */
+  --d-surface-2:#262043; /* image wells */
+  --line:#332D52;
+  --muted:#B9B5D3;       /* 10.1:1 on --d-bg */
+  --coconut-2:var(--d-surface-2);
+}
+
+/* ---------- Base ---------- */
+[data-theme="dark"] body{background:var(--d-bg);color:var(--coconut)}
+[data-theme="dark"] a{color:var(--lime)}
+[data-theme="dark"] a:hover{color:#9BE36F}
+
+/* ---------- Buttons ---------- */
+[data-theme="dark"] .btn-primary{background:var(--lime);color:var(--blackberry)}
+[data-theme="dark"] .btn-primary:hover{background:var(--coconut);color:var(--blackberry)}
+[data-theme="dark"] .btn-secondary{color:var(--coconut)}
+[data-theme="dark"] .btn-secondary:hover{background:var(--coconut);color:var(--blackberry);border-color:var(--coconut)}
+[data-theme="dark"] .link-arrow{color:var(--lime)}
+[data-theme="dark"] .theme-btn{color:var(--coconut)}
+[data-theme="dark"] .theme-btn:hover{border-color:var(--lime);color:var(--lime)}
+
+/* ---------- Header ---------- */
+[data-theme="dark"] .site-header{background:var(--d-bg)}
+[data-theme="dark"] .nav a{color:var(--coconut)}
+[data-theme="dark"] .nav a:hover{color:var(--lime);border-bottom-color:var(--lime)}
+[data-theme="dark"] .lang button[aria-pressed="true"]{background:var(--coconut);color:var(--blackberry)}
+[data-theme="dark"] .menu-btn{color:var(--coconut)}
+[data-theme="dark"] .mobile-nav{background:var(--d-bg)}
+[data-theme="dark"] .mobile-nav a,[data-theme="dark"] .mobile-nav .mn-btn{color:var(--coconut)}
+[data-theme="dark"] .mobile-nav a .icon,[data-theme="dark"] .mobile-nav .mn-btn .icon{color:var(--lime)}
+
+/* ---------- Hero: Blackberry panel sits one step above the darker ground ---------- */
+[data-theme="dark"] .hero{border-bottom:1px solid var(--line)}
+
+/* ---------- Sections ---------- */
+[data-theme="dark"] .sec-head h2{color:var(--coconut)}
+[data-theme="dark"] .label{color:var(--lime)}
+[data-theme="dark"] .chip{background:var(--d-surface);color:var(--coconut)}
+[data-theme="dark"] .chip .icon{color:var(--lime)}
+[data-theme="dark"] .chip:hover{border-color:var(--lime)}
+[data-theme="dark"] .chip[aria-pressed="true"]{background:var(--coconut);border-color:var(--coconut);color:var(--blackberry)}
+[data-theme="dark"] .chip[aria-pressed="true"] .icon{color:var(--kale)}
+[data-theme="dark"] .bag h3,[data-theme="dark"] .empty strong{color:var(--coconut)}
+[data-theme="dark"] .bag:hover h3{color:var(--lime)}
+[data-theme="dark"] .bag .meta .icon{color:var(--lime)}
+[data-theme="dark"] .price b{color:var(--lime)}
+[data-theme="dark"] .rows,[data-theme="dark"] .rules,[data-theme="dark"] .shops{border-top-color:var(--coconut)}
+[data-theme="dark"] .row a:hover .row-name,[data-theme="dark"] .shops a:hover span:first-child{color:var(--lime)}
+[data-theme="dark"] .row .go,[data-theme="dark"] .rule .icon{color:var(--lime)}
+[data-theme="dark"] .rule h3,[data-theme="dark"] .shops a{color:var(--coconut)}
+
+/* How it works keeps its Basil band and Coconut step cards, so it keeps light-theme text tokens */
+[data-theme="dark"] .how{--muted:#4E5A4F;--line:#D5E2CF}
+
+/* ---------- Footer & tab bar ---------- */
+[data-theme="dark"] .site-footer{background:#0B0918}
+[data-theme="dark"] .tabbar{background:var(--d-bg)}
+[data-theme="dark"] .tabbar a[aria-current="page"]{color:var(--lime)}
+
+/* ---------- App preview ---------- */
+[data-theme="dark"] .app-fab{background:var(--lime);color:var(--blackberry)}
+[data-theme="dark"] .app-fab .icon{color:var(--blackberry)}
+[data-theme="dark"] .app-fab:hover{background:var(--coconut)}
+[data-theme="dark"] .phone-screen,[data-theme="dark"] .ph-status{background:var(--d-bg);color:var(--coconut)}
+[data-theme="dark"] .ph-sys i{background:var(--coconut)}
+[data-theme="dark"] .ph-loc{color:var(--coconut)}
+[data-theme="dark"] .ph-loc .icon{color:var(--lime)}
+[data-theme="dark"] .ph-round,[data-theme="dark"] .ph-search,[data-theme="dark"] .ph-card,[data-theme="dark"] .ph-list,
+[data-theme="dark"] .ph-chips button{background:var(--d-surface);color:var(--coconut)}
+[data-theme="dark"] .ph-search{color:var(--muted)}
+[data-theme="dark"] .ph-search input{color:var(--coconut)}
+[data-theme="dark"] .ph-search:focus-within{border-color:var(--lime);box-shadow:0 0 0 3px rgba(116,211,65,.18)}
+[data-theme="dark"] .ph-hero{border:1px solid var(--line)}
+[data-theme="dark"] .ph-chips .icon{color:var(--lime)}
+[data-theme="dark"] .ph-chips button[aria-pressed="true"]{background:var(--coconut);border-color:var(--coconut);color:var(--blackberry)}
+[data-theme="dark"] .ph-chips button[aria-pressed="true"] .icon{color:var(--kale)}
+[data-theme="dark"] .ph-sec h4,[data-theme="dark"] .ph-body b{color:var(--coconut)}
+[data-theme="dark"] .ph-sec span{color:var(--lime)}
+[data-theme="dark"] .ph-price strong,[data-theme="dark"] .ph-list strong{color:var(--lime)}
+[data-theme="dark"] .ph-add,[data-theme="dark"] .ph-heart[aria-pressed="true"]{background:var(--lime);color:var(--blackberry)}
+[data-theme="dark"] .ph-tabs,[data-theme="dark"] .ph-home{background:var(--d-surface)}
+[data-theme="dark"] .ph-tabs button[aria-current="page"]{color:var(--lime)}
+[data-theme="dark"] .ph-tabs .ph-scan{background:var(--lime);color:var(--blackberry)}
+[data-theme="dark"] .ph-home::after{background:var(--coconut)}
+
+/* Links that keep their own colour in dark mode */
+[data-theme="dark"] .row a,[data-theme="dark"] .bag{color:var(--coconut)}
+[data-theme="dark"] .site-footer a{color:var(--coconut)}
+[data-theme="dark"] .site-footer a:hover{color:var(--lime)}
+[data-theme="dark"] .legal a{color:var(--muted-dark)}
+[data-theme="dark"] .how .label{color:var(--blackberry)}

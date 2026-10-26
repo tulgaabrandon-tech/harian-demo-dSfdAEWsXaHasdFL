@@ -172,7 +172,7 @@
     });
     document.getElementById("lang-mn").setAttribute("aria-pressed", String(lang === "mn"));
     document.getElementById("lang-en").setAttribute("aria-pressed", String(lang === "en"));
-    renderBags(); renderTomorrow(); renderShops(); renderApp();
+    renderBags(); renderTomorrow(); renderShops(); renderApp(); if (themeBtn) themeLabel();
   }
 
   function setLang(l) {
@@ -201,6 +201,20 @@
     });
   });
   document.getElementById("show-more").addEventListener("click", function () { expanded = !expanded; renderBags(); });
+  /* Dark / light switch. The initial theme is set by the inline script in <head>. */
+  var themeBtn = document.getElementById("theme-btn");
+  function themeLabel() {
+    var dark = document.documentElement.getAttribute("data-theme") === "dark";
+    themeBtn.setAttribute("aria-label", lang === "en" ? (dark ? "Light mode" : "Dark mode") : (dark ? "Гэрэлтэй горим" : "Харанхуй горим"));
+    themeBtn.setAttribute("aria-pressed", String(dark));
+  }
+  themeBtn.addEventListener("click", function () {
+    var next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme", next);
+    try { localStorage.setItem("hairan-theme", next); } catch (e) {}
+    themeLabel();
+  });
+
   document.getElementById("lang-mn").addEventListener("click", function () { setLang("mn"); });
   document.getElementById("lang-en").addEventListener("click", function () { setLang("en"); });
 
